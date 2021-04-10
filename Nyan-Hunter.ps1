@@ -74,7 +74,7 @@ $mailcc = @("")
 $mailSub = "Nyan Hunter Results " + (Get-Date).tostring("MM-dd-yyyy HH-mm")
 $mailBody = "Nyan Hunter Results for " + (Get-Date).tostring("MM-dd-yyyy HH-mm")
 $mailfiles = @($settings.ReportFile,$settings.threatIPsFile,$settings.AzureRiskFile)
-$mailserver = "ferris-edu.mail.protection.outlook.com"
+$mailserver = "[CHANGE_ME]"
 
 $mailconf = @{
     From = $mailfrom 
@@ -423,7 +423,7 @@ param(
                     $ErrorMessage = $_.Exception.Message
                     $FailedItem = $_.Exception.ItemName
                     Write-Host $ErrorMessage -ForegroundColor Yellow
-                    Send-MailMessage -From "Security@ferris.edu" -To "tribui@ferris.edu" -Subject "Nyan Hunter logs dumping throttled!" -Body "Nyan Hunter dumping throttled at $(Get-Date)`n`n$($content."@odata.nextLink")" -SmtpServer "ferris-edu.mail.protection.outlook.com" -Port "25" -BodyAsHtml -Priority High
+                    
                     #Break
                 }
             } else { Break }
