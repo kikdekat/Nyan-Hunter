@@ -15,7 +15,7 @@ Please refer to: https://docs.microsoft.com/en-us/graph/api/signin-list?view=gra
 ```
 
 The script accepts up to 4 parameters  
--timeback: x hour(s) worth of logs from the running time or since the last run time (which saved at ./NyanData/lastrun.txt). Whichever closer.  
+-timeback: x hour(s) worth of logs from the running time or since the last run time (which saved in ./NyanData/lastrun.txt). Whichever closer.  
 -skip: ignore the last run time, get the exact x hour(s) of the -timeback  
 -limit: amount of logs, 100,000 by default  
 -file: analyze the offline log files  
